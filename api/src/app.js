@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const dogsRoutes = require('./routes/dogs.routes');
 const temperamentsRoutes = require('./routes/temperaments.routes');
 
-require('./db.js');
+require('./database/db.js');
 
 const server = express();
 
