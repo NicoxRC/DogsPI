@@ -7,6 +7,4 @@ router.get('/dogs', getDogs);
 router.post('/dogs', createDog);
 router.get('/dogs/:id', getDog);
 
-
-
 module.exports = router;
