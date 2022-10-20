@@ -22,7 +22,8 @@ const getDogs = async (req, res) => {
             height: e.height.metric,
             weight: e.weight.metric,
             lifeSpan: e.life_span,
-            image: e.image.url
+            image: e.image.url,
+            temperament: e.temperament
         }));
         let allDogs = dogsDb.concat(dogsApi);
         if (name) {

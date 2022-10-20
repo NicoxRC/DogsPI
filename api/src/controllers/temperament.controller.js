@@ -6,8 +6,8 @@ const getTemperaments = async (req, res) => {
     const allTemperament = [];
     try {
         let temperamentsApi = await getApiTemperaments();
-        temperamentsApi.forEach((e) => {
-            Temperament.create({ name: e });
+        temperamentsApi.forEach((el) => {
+            Temperament.create({ name: el });
         });
         let temperamentsBd = await Temperament.findAll({
             attributes: ['name']

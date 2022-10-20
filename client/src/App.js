@@ -1,14 +1,11 @@
 import './App.css';
-import { useSelector } from 'react-redux';
+import Cards from './components/cards/cards.jsx';
 
 function App() {
-  const dogsState = useSelector(state => state.dogs);
-  console.log(dogsState);
-
-
   return (
     <div className="App">
       <h1>Henry Dogs</h1>
+      <Cards />
     </div>
   );
 }

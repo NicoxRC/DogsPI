@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const dogsRoutes = require('./routes/dogs.routes');
 const temperamentsRoutes = require('./routes/temperaments.routes');
+const cors = require('cors');
 
 require('./database/db.js');
 
@@ -12,6 +13,7 @@ const server = express();
 server.name = 'API';
 
 //middlewares
+
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
@@ -23,7 +25,7 @@ server.use((req, res, next) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   next();
 });
-
+server.use(cors())
 server.use(dogsRoutes);
 server.use(temperamentsRoutes);
 
