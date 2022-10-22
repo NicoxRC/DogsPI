@@ -1,10 +1,12 @@
 import axios from 'axios';
 
-const getAllDogs = () => {
-    return axios
-        .get('http://localhost:3001/dogs')
-        .then((res) => res.data)
-        .catch((err) => console.log(err));
+const getAllDogs = async () => {
+    try {
+        const res = await axios.get('http://localhost:3001/dogs');
+        return res.data;
+    } catch (err) {
+        return console.log(err);
+    }
 }
 
-export default getAllDogs;
+export default getAllDogs; 

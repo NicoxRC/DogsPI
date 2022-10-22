@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchDogs } from "../../slices/dogsSlice";
-import Card from "../card/card";
+import Card from "../Card/Card";
 
 export default function Cards() {
   const dogs = useSelector((state) => state.dogs.allDogs);

@@ -1,0 +1,15 @@
+.createButton {
+  position: relative;
+  top: 12.5rem;
+  right: 80px;
+  height: 40px;
+  width: 140px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+}
+.createButton h2 {
+  margin-top: 8px;
+}

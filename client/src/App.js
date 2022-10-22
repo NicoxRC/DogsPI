@@ -1,11 +1,10 @@
 import './App.css';
-import Cards from './components/cards/cards.jsx';
+import Home from './components/Home/Home';
 
 function App() {
   return (
     <div className="App">
-      <h1>Henry Dogs</h1>
-      <Cards />
+      <Home />
     </div>
   );
 }
