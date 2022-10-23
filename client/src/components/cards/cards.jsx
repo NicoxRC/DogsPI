@@ -1,21 +1,15 @@
 import React from "react";
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchDogs } from "../../slices/dogsSlice";
+import { useSelector } from "react-redux";
 import Card from "../Card/Card";
+import Pagination from "../Pagination/Pagination";
 
 export default function Cards() {
-  const dogs = useSelector((state) => state.dogs.allDogs);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchDogs());
-  }, [dispatch]);
-
+  const actualDogs = useSelector((state) => state.pagination.actualDogs);
   return (
     <div>
+      <Pagination />
       <ul>
-        {dogs?.map((el) => (
+        {actualDogs.map((el) => (
           <li key={el.id}>
             <Card
               id={el.id}

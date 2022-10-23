@@ -1,6 +1,9 @@
 .navBar {
   display: flex;
-  background-color: rgb(51, 164, 202);
   padding: 20px, 20px, 0px, 20px;
   justify-content: space-between;
+  background-image: url('./NavBar.png');
+  background-size: 100%;
+  background-position-y: top;
 }
+
