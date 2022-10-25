@@ -1,15 +1,16 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import Card from "../Card/Card";
 import Pagination from "../Pagination/Pagination";
+import Card from "../Card/Card";
+import { useSelector } from "react-redux";
 
 export default function Cards() {
   const actualDogs = useSelector((state) => state.pagination.actualDogs);
+
   return (
     <div>
       <Pagination />
       <ul>
-        {actualDogs.map((el) => (
+        {actualDogs?.map((el) => (
           <li key={el.id}>
             <Card
               id={el.id}

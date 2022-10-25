@@ -1,6 +1,7 @@
+import getDogsApi from "../connection/getDogsApi";
+import searchDogApi from "../connection/searchDogApi";
+import postDogApi from "../connection/postDogApi";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import getAllDogs from "../connection/getDogs";
-import searchDog from "../connection/searchDog";
 
 const initialState = {
     allDogs: [],
@@ -10,7 +11,7 @@ const initialState = {
 export const fetchDogs = createAsyncThunk(
     'dogs/fetchDogs',
     async (_, { dispatch }) => {
-        const allDogs = await getAllDogs();
+        const allDogs = await getDogsApi();
         dispatch(getDogs(allDogs));
     }
 );
@@ -18,8 +19,16 @@ export const fetchDogs = createAsyncThunk(
 export const fetchDog = createAsyncThunk(
     'dogs/fetchDog',
     async (search, { dispatch }) => {
-        const dog = await searchDog(search);
+        const dog = await searchDogApi(search);
         dispatch(getDogName(dog));
+    }
+);
+
+export const postDog = createAsyncThunk(
+    'dogs/postDog',
+    async (newDog, { dispatch }) => {
+        await postDogApi(newDog);
+        dispatch(fetchDogs())
     }
 );
 

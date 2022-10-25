@@ -1,27 +1,26 @@
 import React from "react";
-import Logo from "./Logo/Logo";
-import lupa from "./Search.png";
+import SearchLogo from "./SearchLogo/SearchLogo";
+import lupa from "../../../images/Search.png";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchDog } from "../../../slices/dogsSlice";
 import "./Search.css";
 
 export default function Search() {
+  const [searchDog, setSearchDog] = useState("");
   const dispatch = useDispatch();
 
-  const [dog, setDog] = useState("");
-
   const handleChange = (e) => {
-    setDog(e.target.value);
+    setSearchDog(e.target.value);
   };
 
   const handleClick = (e) => {
-    dispatch(fetchDog(dog));
+    dispatch(fetchDog(searchDog));
   };
 
   return (
     <div className="container">
-      <Logo />
+      <SearchLogo />
       <div className="search">
         <input
           name="Search"
