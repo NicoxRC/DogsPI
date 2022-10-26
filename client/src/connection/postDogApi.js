@@ -6,9 +6,9 @@ const postDogApi = async (dog) => {
     if (!dog.temperament) {
         newDog = {
             name: dog.name,
-            height: `${dog.height_min}-${dog.height_max}`,
-            weight: `${dog.weight_min}-${dog.weight_max}`,
-            lifeSpan: `${dog.lifespan_min}-${dog.lifespan_max} years`,
+            height: `${dog.height_min} - ${dog.height_max}`,
+            weight: `${dog.weight_min} - ${dog.weight_max}`,
+            lifeSpan: `${dog.lifespan_min} - ${dog.lifespan_max} years`,
             image: dog.image,
             temperament: dog.temperament
         };

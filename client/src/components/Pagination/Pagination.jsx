@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { actualDogsPag } from "../../slices/paginationSlice";
+import { setPagination } from "../../slices/paginationSlice";
+import { setShowDogs } from "../../slices/showDogsSlice";
 
 export default function Pagination() {
   const allDogs = useSelector((state) => state.dogs.allDogs);
-  const dogsPerPage = useSelector((state) => state.pagination.dogsPerPage);
-  const currentPage = useSelector((state) => state.pagination.currentPage);
+  const filterDogs = useSelector((state) => state.filters.filterDogs);
+  const dogsPerPage = useSelector((state) => state.pagination.pag.dogsPerPage);
+  const allDogsShow = useSelector((state) => state.showDogs.allDogsShow);
+  const pag = useSelector((state) => state.pagination.pag);
   const dispatch = useDispatch();
   const index = [];
 
+  useEffect(() => {
+    filterDogs?.length
+      ? dispatch(setShowDogs(filterDogs))
+      : dispatch(setShowDogs(allDogs));
+  }, [dispatch, allDogs, filterDogs]);
+
   const handleSetPage = (num) => {
-    let actualPage = currentPage + num;
-    const currentPages = allDogs?.slice(
-      actualPage * dogsPerPage - dogsPerPage,
-      actualPage * dogsPerPage
-    );
-    dispatch(actualDogsPag(currentPages));
+    let actualPage = num;
+    dispatch(setPagination({ allDogsShow, pag, actualPage }));
   };
 
-  for (let i = 1; i <= Math.ceil(allDogs.length / dogsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(allDogsShow.length / dogsPerPage); i++) {
     index.push(i);
   }
 

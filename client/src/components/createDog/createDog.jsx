@@ -33,6 +33,8 @@ export default function CreateDog() {
     image: false,
   });
 
+  const [selectedTemperaments, setSelectedTemperaments] = useState([]);
+
   const formValidation = () => {
     const regexName = /[0-9.,#!$%&;:{}=\-_`~()”“"…]/g;
     const regexImage = "[^\\s]+(.*?)\\.(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)$";
@@ -142,7 +144,6 @@ export default function CreateDog() {
   };
 
   const handleSelect = (e) => {
-    console.log(selectedTemperaments.length);
     if (
       selectedTemperaments.length < 6 &&
       !selectedTemperaments.includes(e.target.value)
@@ -161,8 +162,6 @@ export default function CreateDog() {
       dispatch(postDog({ ...newDog, temperament: selectedTemperaments }));
     }
   };
-
-  const [selectedTemperaments, setSelectedTemperaments] = useState([]);
 
   useEffect(() => {
     dispatch(fetchTemperaments());

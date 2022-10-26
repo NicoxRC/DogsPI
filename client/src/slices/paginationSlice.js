@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    currentPage: 0,
-    dogsPerPage: 8,
+    pag: {
+        currentPage: 0,
+        dogsPerPage: 8,
+    },
     actualDogs: []
 }
 
@@ -10,12 +12,16 @@ export const paginationSlice = createSlice({
     name: 'pagination',
     initialState,
     reducers: {
-        actualDogsPag: (state, action) => {
-            state.actualDogs = action.payload;
+        setPagination: (state, action) => {
+            state.pag.currentPage = action.payload.actualPage;
+            state.actualDogs = action.payload.allDogsShow?.slice(
+                action.payload.actualPage * action.payload.pag.dogsPerPage - action.payload.pag.dogsPerPage,
+                action.payload.actualPage * action.payload.pag.dogsPerPage
+            );
         }
     }
 })
 
-export const { actualDogsPag } = paginationSlice.actions;
+export const { setPagination } = paginationSlice.actions;
 export default paginationSlice.reducer;
 

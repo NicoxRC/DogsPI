@@ -1,11 +1,13 @@
 import getDogsApi from "../connection/getDogsApi";
 import searchDogApi from "../connection/searchDogApi";
 import postDogApi from "../connection/postDogApi";
+import getDogDetailsApi from '../connection/getDogDetailsApi'
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     allDogs: [],
-    dogName: []
+    dogName: [],
+    dogDetails: {}
 };
 
 export const fetchDogs = createAsyncThunk(
@@ -32,6 +34,14 @@ export const postDog = createAsyncThunk(
     }
 );
 
+export const fetchDogDetails = createAsyncThunk(
+    'dogs/fetchDogDetails',
+    async (id, { dispatch }) => {
+        const dogDetails = await getDogDetailsApi(id);
+        dispatch(getDogDetails(dogDetails))
+    }
+)
+
 export const dogSlice = createSlice({
     name: 'dogs',
     initialState,
@@ -41,9 +51,12 @@ export const dogSlice = createSlice({
         },
         getDogName: (state, action) => {
             state.dogName = action.payload;
+        },
+        getDogDetails: (state, action) => {
+            state.dogDetails = action.payload;
         }
     }
 });
 
-export const { getDogs, getDogName } = dogSlice.actions;
+export const { getDogs, getDogName, getDogDetails } = dogSlice.actions;
 export default dogSlice.reducer;
