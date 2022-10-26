@@ -4,6 +4,7 @@ import lupa from "../../../images/Search.png";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchDog } from "../../../slices/dogsSlice";
+import { Link } from "react-router-dom";
 import "./Search.css";
 
 export default function Search() {
@@ -20,7 +21,9 @@ export default function Search() {
 
   return (
     <div className="container">
-      <SearchLogo />
+      <Link to={"/"}>
+        <SearchLogo />
+      </Link>
       <div className="search">
         <input
           name="Search"

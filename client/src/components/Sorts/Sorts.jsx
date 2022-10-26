@@ -9,7 +9,7 @@ export default function Sorts() {
   const allDogsShow = useSelector((state) => state.showDogs.allDogsShow);
   const sortDogs = useSelector((state) => state.sorts.sortDogs);
   const dispatch = useDispatch();
-  const [name, setName] = useState(true);
+  const [name, setName] = useState(false);
   const [weight, setWeight] = useState(true);
   const sortNameProp = "sortName";
   const sortWeightProp = "sortWeight";

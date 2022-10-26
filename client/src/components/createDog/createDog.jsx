@@ -1,11 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { postDog } from "../../slices/dogsSlice";
 import { fetchTemperaments } from "../../slices/temperamentsSlice";
 import "./CreateDog.css";
 
 export default function CreateDog() {
+  const history = useHistory();
   const dispatch = useDispatch();
   const temperaments = useSelector(
     (state) => state.temperaments.allTemperaments
@@ -160,7 +162,11 @@ export default function CreateDog() {
     e.preventDefault();
     if (formValidation()) {
       dispatch(postDog({ ...newDog, temperament: selectedTemperaments }));
+      history.push("/home");
     }
+  };
+  const handleClickBack = () => {
+    history.push("/home");
   };
 
   useEffect(() => {
@@ -169,6 +175,7 @@ export default function CreateDog() {
 
   return (
     <div>
+      <button onClick={handleClickBack}>back</button>
       <form onSubmit={handleSubmit}>
         <h1>Create Dog</h1>
         <div>

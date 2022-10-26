@@ -49,7 +49,7 @@ const getDog = async (req, res) => {
                 name: findedDog.dataValues.name,
                 height: findedDog.dataValues.height,
                 weight: findedDog.dataValues.weight,
-                lifespan: findedDog.dataValues.lifespan,
+                lifespan: findedDog.dataValues.lifeSpan,
                 image: findedDog.dataValues.image,
                 temperament: findedDog.dataValues.temperaments.map((temp) => temp.name).join(', ')
             };
@@ -74,14 +74,15 @@ const getDog = async (req, res) => {
 };
 
 const createDog = async (req, res) => {
-    const { name, height, weight, lifeSpan, temperament } = req.body;
+    const { name, height, weight, lifeSpan, temperament, image } = req.body;
     try {
         if (!name || typeof name !== 'string' || !height || !weight) throw new Error('Bad request.');
         const newDog = await Dog.create({
             name,
             height,
             weight,
-            lifeSpan
+            lifeSpan,
+            image
         });
         if (temperament) {
             const temperamentDog = await Temperament.findOrCreate({

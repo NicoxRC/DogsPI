@@ -1,5 +1,8 @@
 import React from "react";
-import { filterByTemperaments, filterBySource } from "../../slices/filtersSlice";
+import {
+  filterByTemperaments,
+  filterBySource,
+} from "../../slices/filtersSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Filters() {
@@ -15,9 +18,9 @@ export default function Filters() {
     );
   };
 
-  const handleSourceChange = e => {
-    dispatch(filterBySource({[e.target.name]: e.target.value, allDogs}))
-  }
+  const handleSourceChange = (e) => {
+    dispatch(filterBySource({ [e.target.name]: e.target.value, allDogs }));
+  };
 
   return (
     <div>

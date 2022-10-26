@@ -1,29 +1,40 @@
 import axios from 'axios';
 
-const postDogApi = async (dog) => {
-    let newDog = {}
-    if (!dog.image) dog.image = 'https://www.criptonoticias.com/wp-content/uploads/2021/05/dogecoin-perro.jpg';
-    if (!dog.temperament) {
-        newDog = {
-            name: dog.name,
-            height: `${dog.height_min} - ${dog.height_max}`,
-            weight: `${dog.weight_min} - ${dog.weight_max}`,
-            lifeSpan: `${dog.lifespan_min} - ${dog.lifespan_max} years`,
-            image: dog.image,
-            temperament: dog.temperament
-        };
-    } else {
-        newDog = {
-            name: dog.name,
-            height: `${dog.height_min}-${dog.height_max}`,
-            weight: `${dog.weight_min}-${dog.weight_max}`,
-            lifeSpan: `${dog.lifespan_min}-${dog.lifespan_max} years`,
-            image: dog.image
-        };
-    }
+const postDogApi = async (newDog) => {
+    let Dog = {}
+    if (!newDog.image) newDog.image = 'https://www.criptonoticias.com/wp-content/uploads/2021/05/dogecoin-perro.jpg';
+    console.log(newDog.image);
+
+    Dog = {
+        name: newDog.name,
+        height: `${newDog.height_min} - ${newDog.height_max}`,
+        weight: `${newDog.weight_min} - ${newDog.weight_max}`,
+        lifeSpan: `${newDog.lifespan_min} - ${newDog.lifespan_max} years`,
+        image: newDog.image,
+        temperament: newDog.temperament.toString()
+    };
+
+    // if (newDog.temperament) {
+    //     Dog = {
+    //         name: newDog.name,
+    //         height: `${newDog.height_min} - ${newDog.height_max}`,
+    //         weight: `${newDog.weight_min} - ${newDog.weight_max}`,
+    //         lifeSpan: `${newDog.lifespan_min} - ${newDog.lifespan_max} years`,
+    //         image: newDog.image,
+    //         temperament: newDog.temperament.toString()
+    //     };
+    // } else {
+    //     Dog = {
+    //         name: newDog.name,
+    //         height: `${newDog.height_min} - ${newDog.height_max}`,
+    //         weight: `${newDog.weight_min} - ${newDog.weight_max}`,
+    //         lifeSpan: `${newDog.lifespan_min} - ${newDog.lifespan_max} years`,
+    //         image: newDog.image
+    //     };
+    // }
 
     await axios
-        .post('http://localhost:3001/dogs', newDog)
+        .post('http://localhost:3001/dogs', Dog)
         .then(() => {
             alert('Dog breed created succesfully!')
         })

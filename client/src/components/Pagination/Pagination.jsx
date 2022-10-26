@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setPagination } from "../../slices/paginationSlice";
+import { setPage, setPagination } from "../../slices/paginationSlice";
 import { setShowDogs } from "../../slices/showDogsSlice";
 
 export default function Pagination() {
@@ -19,11 +19,14 @@ export default function Pagination() {
   }, [dispatch, allDogs, filterDogs]);
 
   const handleSetPage = (num) => {
-    let actualPage = num;
-    dispatch(setPagination({ allDogsShow, pag, actualPage }));
+    dispatch(setPage(num));
   };
 
-  for (let i = 1; i <= Math.ceil(allDogsShow.length / dogsPerPage); i++) {
+  useEffect(() => {
+    dispatch(setPagination({ allDogsShow, pag }));
+  }, [dispatch, allDogsShow, pag]);
+
+  for (let i = 1; i <= Math.ceil(allDogsShow?.length / dogsPerPage); i++) {
     index.push(i);
   }
 

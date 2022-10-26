@@ -17,10 +17,10 @@ export const filtersSlice = createSlice({
         filterBySource: (state, action) => {
             const source = action.payload.filterBySource === 'all'
                 ? action.payload.allDogs
-                : action.payload.filterBySource === 'api'
-                    ? action.payload.allDogs.filter(el => typeof el.id === 'number')
-                    : action.payload.allDogs.filter(el => typeof el.id === 'string')
-            state.filterDogs = source;
+                : action.payload.filterBySource === 'db'
+                    ? action.payload.allDogs.filter(el => el.id.length > 3)
+                    : action.payload.allDogs.filter(el => typeof el.id === 'number')
+            state.filterDogs = source.length ? source : ["NotFound"];
         }
     }
 })
