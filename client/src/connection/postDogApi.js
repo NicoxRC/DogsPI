@@ -14,33 +14,12 @@ const postDogApi = async (newDog) => {
         temperament: newDog.temperament.toString()
     };
 
-    // if (newDog.temperament) {
-    //     Dog = {
-    //         name: newDog.name,
-    //         height: `${newDog.height_min} - ${newDog.height_max}`,
-    //         weight: `${newDog.weight_min} - ${newDog.weight_max}`,
-    //         lifeSpan: `${newDog.lifespan_min} - ${newDog.lifespan_max} years`,
-    //         image: newDog.image,
-    //         temperament: newDog.temperament.toString()
-    //     };
-    // } else {
-    //     Dog = {
-    //         name: newDog.name,
-    //         height: `${newDog.height_min} - ${newDog.height_max}`,
-    //         weight: `${newDog.weight_min} - ${newDog.weight_max}`,
-    //         lifeSpan: `${newDog.lifespan_min} - ${newDog.lifespan_max} years`,
-    //         image: newDog.image
-    //     };
-    // }
-
-    await axios
-        .post('http://localhost:3001/dogs', Dog)
-        .then(() => {
-            alert('Dog breed created succesfully!')
-        })
-        .catch((err) => {
-            alert('Error trying to create dog breed:' + err.message);
-        });
+    try {
+        await axios.post('http://localhost:3001/dogs', Dog)
+        return alert('Dog breed created succesfully!')
+    } catch (err) {
+        return alert('Error trying to create dog breed:' + err.message);
+    }
 };
 
 export default postDogApi;

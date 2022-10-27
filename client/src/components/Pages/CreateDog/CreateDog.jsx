@@ -2,8 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { postDog } from "../../slices/dogsSlice";
-import { fetchTemperaments } from "../../slices/temperamentsSlice";
+import { postDog } from "../../../slices/dogsSlice";
+import { fetchTemperaments } from "../../../slices/temperamentsSlice";
 import "./CreateDog.css";
 
 export default function CreateDog() {

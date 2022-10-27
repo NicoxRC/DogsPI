@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import SortNameImage from "./SortNameImage/SortNameImage";
 import SortWeightImage from "./SortWeightImage/SortWeightImage";
-import { sortName, sortWeight } from "../../slices/sortsSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { setShowDogs } from "../../slices/showDogsSlice";
+import { sortName, sortWeight } from "../../../../slices/sortsSlice";
+import { setShowDogs } from "../../../../slices/showDogsSlice";
 import "./Sorts.css";
 
 export default function Sorts() {

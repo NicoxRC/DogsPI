@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchDogDetails } from "../../slices/dogsSlice";
+import { fetchDogDetails } from "../../../slices/dogsSlice";
 import "./DogDetails.css";
 
 export default function DogDetails() {

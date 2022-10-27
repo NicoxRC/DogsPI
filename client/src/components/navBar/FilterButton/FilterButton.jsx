@@ -1,5 +1,5 @@
 import React from "react";
-import rayas from "./3rayas.png";
+import rayas from "../../../images/3rayas.png";
 import "./FilterButton.css";
 
 export default function FilterButton() {

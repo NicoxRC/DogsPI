@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Search from "./Search/Search";
 import CreateButton from "./CreateButton/CreateButton";
-import Filters from "../Filters/Filters";
-import { Link } from "react-router-dom";
+import Filters from "./FilterButton/Filters/Filters";
 import "./NavBar.css";
 
 export default function NavBar() {
