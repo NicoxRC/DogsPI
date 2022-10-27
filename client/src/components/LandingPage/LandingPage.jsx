@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./LandingPage.css";
 
 export default function LandingPage() {
   return (
-    <div>
-      <Link to="/home">
-        <h1>go</h1>
-      </Link>
+    <div className="landing_page">
+      {/* <img src={back} alt={back} /> */}
+      <button>
+        <Link to="/home">DogoPedia</Link>
+      </button>
     </div>
   );
 }

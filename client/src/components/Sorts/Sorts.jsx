@@ -4,6 +4,7 @@ import SortWeightImage from "./SortWeightImage/SortWeightImage";
 import { sortName, sortWeight } from "../../slices/sortsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setShowDogs } from "../../slices/showDogsSlice";
+import "./Sorts.css";
 
 export default function Sorts() {
   const allDogsShow = useSelector((state) => state.showDogs.allDogsShow);
@@ -29,7 +30,7 @@ export default function Sorts() {
   }, [dispatch, sortDogs]);
 
   return (
-    <div>
+    <div className="sorts">
       <div>
         <button onClick={handleSortName}>
           <SortNameImage />

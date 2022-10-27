@@ -4,6 +4,8 @@ import {
   filterBySource,
 } from "../../slices/filtersSlice";
 import { useDispatch, useSelector } from "react-redux";
+import "./Filters.css";
+import Sorts from "../Sorts/Sorts";
 
 export default function Filters() {
   const dispatch = useDispatch();
@@ -23,9 +25,9 @@ export default function Filters() {
   };
 
   return (
-    <div>
-      <div>
-        <h4>Temperaments:</h4>
+    <div className="filter">
+      <div className="filter_temperaments">
+        <h3>Temperaments:</h3>
         <select
           name="filterByTemperament"
           defaultValue="all"
@@ -39,8 +41,8 @@ export default function Filters() {
           ))}
         </select>
       </div>
-      <div>
-        <h4>Source:</h4>
+      <div className="filter_source">
+        <h3>Source:</h3>
         <select
           name="filterBySource"
           onChange={handleSourceChange}
@@ -52,6 +54,7 @@ export default function Filters() {
           <option value="db">Only DB</option>
         </select>
       </div>
+      <Sorts />
     </div>
   );
 }

@@ -1,0 +1,63 @@
+.dog_details {
+  display: flex;
+  justify-content: center;
+  width: 154vh;
+  height: 100%;
+  background-color: rgb(181, 214, 248);
+  padding: 220px;
+}
+
+.dog_details_container {
+  display: flex;
+  width: 1000px;
+  height: 521px;
+  background-color: rgb(133, 28, 28);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+}
+
+.dog_details button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 40px;
+  width: 70px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgb(9, 121, 176);
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.dog_details button:hover {
+  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.22);
+  opacity: 85%;
+  transform: scale(1.1);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+.dog_details_img img {
+  width: 550px;
+  height: 100%;
+}
+
+.dog_details_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dog_details_list h1 {
+  color: rgb(0, 0, 0);
+}
+
+.dog_details_list ul {
+  list-style: none;
+  color: white;
+}

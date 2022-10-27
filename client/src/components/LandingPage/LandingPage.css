@@ -1,0 +1,30 @@
+.landing_page {
+  height: 961px;
+  background-image: url("../../images/LandingPage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.landing_page button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 150px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 100%;
+  box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgb(50, 153, 187);
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+  padding: 40px;
+}
+.landing_page button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}

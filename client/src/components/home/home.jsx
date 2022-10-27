@@ -4,8 +4,8 @@ import Pagination from "../Pagination/Pagination";
 import Cards from "../Cards/Cards";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import Filters from "../Filters/Filters";
-import Sorts from "../Sorts/Sorts";
+//import Filters from "../Filters/Filters";
+//import Sorts from "../Sorts/Sorts";
 import { fetchDogs } from "../../slices/dogsSlice";
 import { fetchTemperaments } from "../../slices/temperamentsSlice";
 
@@ -18,10 +18,8 @@ export default function Home() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="home">
       <NavBar />
-      <Filters />
-      <Sorts />
       <Pagination />
       <Cards />
     </div>
