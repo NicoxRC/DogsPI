@@ -1,3 +1,91 @@
-.error{
-    color: red;
+.create_dog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(181, 214, 248);
+}
+
+.button_back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 40px;
+  width: 70px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgb(9, 121, 176);
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.button_back:hover {
+  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.22);
+  opacity: 85%;
+  transform: scale(1.1);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+.dog_form {
+  margin: 50px;
+  width: 50%;
+  height: auto;
+  background-image: url("../../../images/CreateDog.gif");
+  background-size: cover;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.dog_form h1 {
+  color: black;
+}
+.dog_form h3 {
+  color: rgb(0, 255, 255);
+}
+
+.dog_form label {
+  font-weight: bold;
+  color: black;
+}
+
+.input_dog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select_temperaments select {
+  width: 200px;
+}
+
+.error {
+  color: red;
+  font-weight: bolder;
+  font-size: smaller;
+}
+
+.submit_button {
+  color: white;
+  font-weight: bolder;
+  font-size: medium;
+  margin: 20px 0;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgb(9, 121, 176);
+}
+
+.submit_button:hover {
+  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.22);
+  opacity: 85%;
+  transform: scale(1.1);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
 }

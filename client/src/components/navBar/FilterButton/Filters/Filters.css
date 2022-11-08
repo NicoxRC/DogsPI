@@ -1,17 +1,16 @@
 .filter {
   display: flex;
-  margin-top: 180px;
 }
 .filter h3 {
-  color: white;
+  color: black;
 }
 
 .filter_temperaments select {
-  color: #fff;
+  color: black;
   cursor: pointer;
   width: 150px;
   height: 25px;
-  background: rgb(9, 121, 176);
+  background: white;
   border-radius: 5px;
   border: none;
   margin-left: 10px;
@@ -21,11 +20,11 @@
 }
 
 .filter_source select {
-  color: #fff;
+  color: black;
   cursor: pointer;
   width: 150px;
   height: 25px;
-  background: rgb(9, 121, 176);
+  background: white;
   border-radius: 5px;
   border: none;
   font-weight: bold;

@@ -16,3 +16,13 @@
   width: 40px;
   cursor: pointer;
 }
+.filters_container {
+  position: absolute;
+  top: 70px;
+  left: 150px;
+  height: 190px;
+  width: 350px;
+  background: linear-gradient(to right, red, rgb(50, 153, 187));
+  border-radius: 20px;
+  box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+}

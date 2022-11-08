@@ -1,20 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   filterByTemperaments,
   filterBySource,
 } from "../../../../slices/filtersSlice";
-import Sorts from "../Sorts/Sorts";
-import { setPage, setPagination } from "../../../../slices/paginationSlice";
+import { setPage } from "../../../../slices/paginationSlice";
 import "./Filters.css";
 
 export default function Filters() {
-  const pag = useSelector((state) => state.pagination.pag);
   const dispatch = useDispatch();
   const temperaments = useSelector(
     (state) => state.temperaments.allTemperaments
   );
-  const allDogsShow = useSelector((state) => state.showDogs.allDogsShow);
   const allDogs = useSelector((state) => state.dogs.allDogs);
 
   const handleTemperamentChange = (e) => {
@@ -59,7 +56,6 @@ export default function Filters() {
           <option value="db">Only DB</option>
         </select>
       </div>
-      <Sorts />
     </div>
   );
 }
