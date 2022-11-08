@@ -4,6 +4,7 @@ import temperamentsReducer from '../slices/temperamentsSlice';
 import filtersReducer from '../slices/filtersSlice';
 import sortsReducer from '../slices/sortsSlice'
 import showDogsReducer from '../slices/showDogsSlice';
+import loadingReducer from '../slices/loadingSlice'
 import { configureStore } from '@reduxjs/toolkit';
 
 export default configureStore({
@@ -13,6 +14,7 @@ export default configureStore({
         temperaments: temperamentsReducer,
         filters: filtersReducer,
         sorts: sortsReducer,
-        showDogs: showDogsReducer
+        showDogs: showDogsReducer,
+        loading: loadingReducer
     }
 });

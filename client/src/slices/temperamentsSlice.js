@@ -1,4 +1,5 @@
 import getTemperamentsApi from '../connection/getTemperamentsApi';
+import { setLoading } from './loadingSlice'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -8,8 +9,10 @@ const initialState = {
 export const fetchTemperaments = createAsyncThunk(
     'temperaments/fetchTemperaments',
     async (_, { dispatch }) => {
+        dispatch(setLoading(true))
         const allTemperaments = await getTemperamentsApi();
         dispatch(getTemperaments(allTemperaments));
+        dispatch(setLoading(true))
     }
 )
 

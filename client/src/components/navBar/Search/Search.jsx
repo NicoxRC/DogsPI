@@ -15,7 +15,7 @@ export default function Search() {
     setSearchDog(e.target.value);
   };
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     dispatch(fetchDog(searchDog));
   };
 

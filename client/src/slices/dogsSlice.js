@@ -2,6 +2,7 @@ import getDogsApi from "../connection/getDogsApi";
 import searchDogApi from "../connection/searchDogApi";
 import postDogApi from "../connection/postDogApi";
 import getDogDetailsApi from '../connection/getDogDetailsApi'
+import { setLoading } from './loadingSlice'
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -13,32 +14,40 @@ const initialState = {
 export const fetchDogs = createAsyncThunk(
     'dogs/fetchDogs',
     async (_, { dispatch }) => {
+        dispatch(setLoading(true))
         const allDogs = await getDogsApi();
         dispatch(getDogs(allDogs));
+        dispatch(setLoading(false))
     }
 );
 
 export const fetchDog = createAsyncThunk(
     'dogs/fetchDog',
     async (search, { dispatch }) => {
+        dispatch(setLoading(true))
         const dog = await searchDogApi(search);
         dispatch(getDogName(dog));
+        dispatch(setLoading(false))
     }
 );
 
 export const postDog = createAsyncThunk(
     'dogs/postDog',
     async (newDog, { dispatch }) => {
+        dispatch(setLoading(true))
         await postDogApi(newDog);
         dispatch(fetchDogs())
+        dispatch(setLoading(false))
     }
 );
 
 export const fetchDogDetails = createAsyncThunk(
     'dogs/fetchDogDetails',
     async (id, { dispatch }) => {
+        dispatch(setLoading(true))
         const dogDetails = await getDogDetailsApi(id);
         dispatch(getDogDetails(dogDetails))
+        dispatch(setLoading(false))
     }
 )
 
