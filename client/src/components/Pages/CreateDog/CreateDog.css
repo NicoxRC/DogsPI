@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(181, 214, 248);
+  background-image: url("../../../images/patitas.gif");
+  background-color: whitesmoke;
+  padding-bottom: 70px;
 }
 
 .button_back {
@@ -20,6 +22,7 @@
   color: white;
   font-weight: bolder;
   font-size: larger;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .button_back:hover {
@@ -30,48 +33,79 @@
   cursor: pointer;
 }
 
-.dog_form {
+.dog_form_container {
   margin: 50px;
   width: 50%;
   height: auto;
-  background-image: url("../../../images/CreateDog.gif");
+  background-image: url("../../../images/CreateDog.jpg");
   background-size: cover;
   border: 2px solid black;
   border-radius: 20px;
 }
 
-.dog_form h1 {
-  color: black;
+.dog_form_container h1 {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.dog_form h3 {
-  color: rgb(0, 255, 255);
+
+.dog_form {
+  background-color: rgba(0, 0, 0, 0.305);
+  height: auto;
+  border-radius: 20px;
+  padding-top: 20px;
 }
 
 .dog_form label {
-  font-weight: bold;
+  font-weight: 500;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.dog_form input {
+  border: none;
+  border-radius: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.dog_form input::placeholder {
   color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.input_dog {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.mini_containers {
+  padding: 25px;
 }
 
-.select_temperaments select {
-  width: 200px;
+.temperaments_container {
+  color: white;
+  font-size: medium;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.temperaments_container button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .error {
+  position: absolute;
+  left: 35%;
+  background-color: rgba(0, 0, 0, 0.66);
+  width: fit-content;
   color: red;
-  font-weight: bolder;
-  font-size: smaller;
+  font-size: medium;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .submit_button {
   color: white;
   font-weight: bolder;
   font-size: medium;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 20px 0;
   padding: 20px;
   border: none;

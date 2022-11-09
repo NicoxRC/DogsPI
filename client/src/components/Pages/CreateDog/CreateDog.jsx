@@ -153,11 +153,11 @@ export default function CreateDog() {
       selectedTemperaments.length < 6 &&
       !selectedTemperaments.includes(e.target.value)
     ) {
+      setBottonActive(false);
       setError({ ...error, temperament: false });
       setSelectedTemperaments([...selectedTemperaments, e.target.value]);
     } else {
       setBottonActive(true);
-      setSelectedTemperaments([...selectedTemperaments, e.target.value]);
       setError({ ...error, temperament: true });
     }
   };
@@ -185,11 +185,11 @@ export default function CreateDog() {
       <button className="button_back" onClick={handleClickBack}>
         back
       </button>
-      <div className="dog_form">
-        <form onSubmit={handleSubmit}>
+      <div className="dog_form_container">
+        <form className="dog_form" onSubmit={handleSubmit}>
           <h1>Create Dog</h1>
-          <div>
-            <h3>Name: </h3>
+          <div className="mini_containers">
+            <label htmlFor="name">Name : </label>
             <input
               type="text"
               name="name"
@@ -201,24 +201,25 @@ export default function CreateDog() {
               numbers or punctuation marks
             </p>
           </div>
-          <div className="input_dog">
-            <h3>Height (cm):</h3>
-            <label htmlFor="height_min">Min</label>
+          <div className="mini_containers">
+            <label htmlFor="height_min">Min height: </label>
             <input
               type="text"
               name="height_min"
-              placeholder="min height..."
+              placeholder="Min height..."
               onChange={handleChange}
             />
             <p className="error" hidden={error.height_min ? false : true}>
               The minimum height must be greater than 15 cm and less than the
               maximum height
             </p>
-            <label htmlFor="height_max">Max</label>
+          </div>
+          <div className="mini_containers">
+            <label htmlFor="height_max">Max height: </label>
             <input
               type="text"
               name="height_max"
-              placeholder="max height..."
+              placeholder="Max height..."
               onChange={handleChange}
             />
             <p className="error" hidden={error.height_max ? false : true}>
@@ -226,24 +227,25 @@ export default function CreateDog() {
               minimum height
             </p>
           </div>
-          <div className="input_dog">
-            <h3>Weight (Kg):</h3>
-            <label htmlFor="weight_min">Min</label>
+          <div className="mini_containers">
+            <label htmlFor="weight_min">Min weight: </label>
             <input
               type="text"
               name="weight_min"
-              placeholder="min weight..."
+              placeholder="Min weight..."
               onChange={handleChange}
             />
             <p className="error" hidden={error.weight_min ? false : true}>
               The minimum weight must be greater than 1.4 kg and less than the
               maximum weight
             </p>
-            <label htmlFor="weight_max">Max</label>
+          </div>
+          <div className="mini_containers">
+            <label htmlFor="weight_max">Max weight: </label>
             <input
               type="text"
               name="weight_max"
-              placeholder="max weight..."
+              placeholder="Max weight..."
               onChange={handleChange}
             />
             <p className="error" hidden={error.weight_max ? false : true}>
@@ -251,24 +253,25 @@ export default function CreateDog() {
               minimum height
             </p>
           </div>
-          <div className="input_dog">
-            <h3>Lifespan (years):</h3>
-            <label htmlFor="lifespan_min">Min</label>
+          <div className="mini_containers">
+            <label htmlFor="lifespan_min">Min lifespan: </label>
             <input
               type="text"
               name="lifespan_min"
-              placeholder="min lifespan..."
+              placeholder="Min lifespan..."
               onChange={handleChange}
             />
             <p className="error" hidden={error.lifespan_min ? false : true}>
               The minimum lifespan must be greater than 8 years and less than
               the maximum lifespan
             </p>
-            <label htmlFor="lifespan_max">Max</label>
+          </div>
+          <div className="mini_containers">
+            <label htmlFor="lifespan_max">Max lifespan: </label>
             <input
               type="text"
               name="lifespan_max"
-              placeholder="max lifespan..."
+              placeholder="Max lifespan..."
               onChange={handleChange}
             />
             <p className="error" hidden={error.lifespan_max ? false : true}>
@@ -276,20 +279,20 @@ export default function CreateDog() {
               the minimum lifespan
             </p>
           </div>
-          <div>
-            <h3>Image:</h3>
+          <div className="mini_containers">
+            <label htmlFor="image">Image: </label>
             <input
               type="text"
               name="image"
-              placeholder="image..."
+              placeholder="Image..."
               onChange={handleChange}
             />
             <p className="error" hidden={error.image ? false : true}>
               The image must be a valid link or be empty
             </p>
           </div>
-          <div className="select_temperaments">
-            <h3>Temperaments:</h3>
+          <div className="mini_containers">
+            <label htmlFor="temperaments">Temperaments: </label>
             <select
               name="temperaments"
               defaultValue="default"
@@ -309,7 +312,7 @@ export default function CreateDog() {
               repeated
             </p>
           </div>
-          <div>
+          <div className="temperaments_container">
             {selectedTemperaments?.map((temp) => (
               <p value={temp} key={temp}>
                 {temp}{" "}

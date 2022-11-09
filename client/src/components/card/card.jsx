@@ -11,7 +11,7 @@ export default function Card(props) {
         <h1>{props.name}</h1>
       </div>
       <p className="weight_dog_card">
-        <strong>Weight:</strong>
+        <strong>Weight: </strong>
         {props.weight} Kg
       </p>
       <p className="temperament_dog_card">

@@ -9,10 +9,10 @@ import "./Filters.css";
 
 export default function Filters() {
   const dispatch = useDispatch();
+  const allDogs = useSelector((state) => state.dogs.allDogs);
   const temperaments = useSelector(
     (state) => state.temperaments.allTemperaments
   );
-  const allDogs = useSelector((state) => state.dogs.allDogs);
 
   const handleTemperamentChange = (e) => {
     dispatch(

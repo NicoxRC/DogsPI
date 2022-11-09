@@ -1,30 +1,46 @@
 .landing_page {
   height: 100vh;
-  background-image: url("../../../images/LandingPage.jpg");
+  background-image: url("../../../images/LadingPage.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
 }
-.landing_page button {
+
+.landing_page p {
+  color: white;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: 150px;
-  margin-left: 10px;
-  border: none;
-  border-radius: 100%;
-  box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
-  cursor: pointer;
-  text-decoration: none;
-  background-color: rgb(50, 153, 187);
-  color: white;
+  top: 40%;
+  left: 8%;
+  font-size: xx-large;
   font-weight: bolder;
-  font-size: larger;
-  padding: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.landing_page button a {
-  text-decoration: none;
-  color: white;
-  font-weight: bolder;
-  font-size: larger;
+
+.linkedin_logo {
+  position: absolute;
+  top: 55%;
+  left: 20%;
+  width: 100px;
+  height: 100px;
+}
+
+.linkedin_logo:hover {
+  opacity: 85%;
+  transform: scale(1.1);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+.github_logo {
+  position: absolute;
+  top: 55%;
+  left: 14%;
+  width: 100px;
+  height: 100px;
+}
+
+.github_logo:hover {
+  opacity: 85%;
+  transform: scale(1.1);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
 }

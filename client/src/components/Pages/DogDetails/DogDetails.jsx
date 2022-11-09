@@ -34,7 +34,7 @@ export default function DogDetails() {
           <ul>
             <li>
               <p>
-                <strong>Temperament :</strong>
+                <strong>Temperament: </strong>
                 {dogDetails?.temperament
                   ? dogDetails?.temperament
                   : "Not specified"}
@@ -42,19 +42,19 @@ export default function DogDetails() {
             </li>
             <li>
               <p>
-                <strong>Height :</strong>
+                <strong>Height: </strong>
                 {dogDetails?.height} Cm
               </p>
             </li>
             <li>
               <p>
-                <strong>Weight :</strong>
+                <strong>Weight: </strong>
                 {dogDetails?.weight} Kg
               </p>
             </li>
             <li>
               <p>
-                <strong>Lifespan:</strong>
+                <strong>Lifespan: </strong>
                 {parseInt(dogDetails?.lifespan) > 0
                   ? dogDetails?.lifespan
                   : "Not specified"}

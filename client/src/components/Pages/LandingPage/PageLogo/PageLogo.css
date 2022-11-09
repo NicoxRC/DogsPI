@@ -1,0 +1,15 @@
+.page_logo {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 1%;
+  left: 5%;
+  cursor: pointer;
+}
+
+.page_logo:hover {
+  opacity: 85%;
+  transform: scale(1.1);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}

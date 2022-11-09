@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .search input {
   margin: none;
   padding: 8px;
@@ -13,6 +14,11 @@
   box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
   margin-bottom: 12px;
 }
+
+.search input::placeholder {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 .search button {
   position: absolute;
   left: 56.5%;
@@ -25,6 +31,7 @@
   background-color: transparent;
   text-decoration: none;
 }
+
 .search button img {
   height: 30px;
   width: auto;

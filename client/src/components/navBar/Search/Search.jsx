@@ -1,10 +1,10 @@
 import React from "react";
-import SearchLogo from "./SearchLogo/SearchLogo";
-import lupa from "../../../images/Search.png";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchDog } from "../../../slices/dogsSlice";
 import { Link } from "react-router-dom";
+import SearchLogo from "./SearchLogo/SearchLogo";
+import lupa from "../../../images/Search.png";
 import "./Search.css";
 
 export default function Search() {

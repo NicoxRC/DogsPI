@@ -3,7 +3,8 @@
   justify-content: center;
   width: 154vh;
   height: 100%;
-  background-color: rgb(181, 214, 248);
+  background-image: url("../../../images/patitas.gif");
+  background-color: whitesmoke;
   padding: 220px;
 }
 
@@ -11,7 +12,7 @@
   display: flex;
   width: 1000px;
   height: 521px;
-  background-color: rgb(133, 28, 28);
+  background-color: rgb(230, 230, 230);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
@@ -32,6 +33,7 @@
   color: white;
   font-weight: bolder;
   font-size: larger;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .dog_details button:hover {
@@ -54,10 +56,12 @@
 }
 
 .dog_details_list h1 {
-  color: rgb(0, 0, 0);
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .dog_details_list ul {
   list-style: none;
-  color: white;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }

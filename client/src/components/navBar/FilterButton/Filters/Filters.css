@@ -1,8 +1,10 @@
 .filter {
   display: flex;
 }
+
 .filter h3 {
   color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .filter_temperaments select {
@@ -17,6 +19,7 @@
   margin-right: 15px;
   font-weight: bold;
   font-size: medium;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .filter_source select {
@@ -29,4 +32,5 @@
   border: none;
   font-weight: bold;
   font-size: medium;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
