@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const getDogsApi = async () => {
     try {
-        const res = await axios.get('http://localhost:3001/dogs');
+        const res = await axios.get('/dogs');
         return res.data;
     } catch (err) {
         return console.log(err);

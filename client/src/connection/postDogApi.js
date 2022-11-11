@@ -15,7 +15,7 @@ const postDogApi = async (newDog) => {
     };
 
     try {
-        await axios.post('http://localhost:3001/dogs', Dog)
+        await axios.post('/dogs', Dog)
         return alert('Dog breed created succesfully!')
     } catch (err) {
         return alert('Error trying to create dog breed:' + err.message);
