@@ -24,7 +24,6 @@
 }
 
 .linkedin_logo:hover {
-  opacity: 85%;
   transform: scale(1.1);
   transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
@@ -39,7 +38,6 @@
 }
 
 .github_logo:hover {
-  opacity: 85%;
   transform: scale(1.1);
   transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
