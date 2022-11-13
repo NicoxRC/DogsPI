@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchDogs } from "../../../slices/dogsSlice";
 import { fetchTemperaments } from "../../../slices/temperamentsSlice";
-import NavBar from "../../NavBar/NavBar";
+import NavBar from "../../navBar/NavBar";
 import Pagination from "../../Pagination/Pagination";
-import Cards from "../../Cards/Cards";
+import Cards from "../../cards/Cards";
 import Spinner from "../../Spinner/Spinner";
 
 export default function Home() {
