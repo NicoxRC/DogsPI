@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Card from "../Card/Card";
+import Card from "../card/Card";
 import "./Cards.css";
 
 export default function Cards() {
