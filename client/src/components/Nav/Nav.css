@@ -1,8 +1,7 @@
 .navBar {
   display: flex;
-  padding: 20px, 20px, 0px, 20px;
+  padding-bottom: 16px;
   justify-content: space-between;
   background-image: url("../../images/NavBar.png");
   background-size: 100%;
-  background-position-y: top;
 }
