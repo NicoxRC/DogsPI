@@ -1,7 +1,4 @@
 .createButton {
-  position: relative;
-  top: 12.5rem;
-  right: 80px;
   height: 40px;
   width: 140px;
   border: none;
@@ -22,5 +19,5 @@
 .createButton h2 {
   margin-top: 8px;
   color: white;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

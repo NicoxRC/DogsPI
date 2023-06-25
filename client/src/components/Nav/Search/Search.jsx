@@ -1,14 +1,12 @@
-import React from "react";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { fetchDog } from "../../../slices/dogsSlice";
-import { Link } from "react-router-dom";
-import SearchLogo from "./SearchLogo/SearchLogo";
-import lupa from "../../../images/Search.png";
-import "./Search.css";
+import React from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchDog } from '../../../slices/dogsSlice';
+import lupa from '../../../images/Search.png';
+import './Search.css';
 
 export default function Search() {
-  const [searchDog, setSearchDog] = useState("");
+  const [searchDog, setSearchDog] = useState('');
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -20,10 +18,7 @@ export default function Search() {
   };
 
   return (
-    <div className="container">
-      <Link to={"/"}>
-        <SearchLogo />
-      </Link>
+    <div className="container_search">
       <div className="search">
         <input
           name="Search"
@@ -31,6 +26,8 @@ export default function Search() {
           placeholder="Search..."
           onChange={handleChange}
         />
+      </div>
+      <div>
         <button onClick={handleClick}>
           <img src={lupa} alt={lupa} />
         </button>

@@ -1,7 +1,7 @@
 .pagination {
   display: flex;
   justify-content: center;
-  background-color: rgb(181, 214, 248);
+  margin-top: 20px;
 }
 
 .pagination button {
@@ -14,7 +14,7 @@
   cursor: pointer;
   font-weight: bold;
   font-size: medium;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
 }
 
@@ -26,7 +26,7 @@
   transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
   font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .pagination button:focus {
@@ -34,5 +34,5 @@
   background-color: aqua;
   font-weight: bold;
   font-size: medium;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

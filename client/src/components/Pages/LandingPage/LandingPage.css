@@ -1,26 +1,36 @@
 .landing_page {
   height: 100vh;
-  background-image: url("../../../images/LadingPage.jpg");
+  background-image: url('../../../images/LadingPage.jpg');
   background-size: cover;
   background-position: center center;
 }
 
-.landing_page p {
+.container_info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+.container_info p {
   color: white;
-  position: absolute;
-  top: 40%;
-  left: 8%;
+  background-color: rgba(128, 128, 128, 0.199);
+  border-radius: 10px;
+  width: 40%;
   font-size: xx-large;
   font-weight: bolder;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+}
+
+.container_logos {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 50px;
 }
 
 .linkedin_logo {
-  position: absolute;
-  top: 55%;
-  left: 20%;
-  width: 100px;
-  height: 100px;
+  width: 115px;
+  height: 120px;
 }
 
 .linkedin_logo:hover {
@@ -30,9 +40,7 @@
 }
 
 .github_logo {
-  position: absolute;
-  top: 55%;
-  left: 14%;
+  margin-top: 10px;
   width: 100px;
   height: 100px;
 }

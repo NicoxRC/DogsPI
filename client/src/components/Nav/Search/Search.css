@@ -1,12 +1,10 @@
-.container {
+.container_search {
   display: flex;
-  flex-direction: column;
 }
 
 .search input {
-  margin: none;
   padding: 8px;
-  width: 25rem;
+  width: 20rem;
   height: 24px;
   border-radius: 16px;
   outline: none;
@@ -16,14 +14,12 @@
 }
 
 .search input::placeholder {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.search button {
-  position: absolute;
-  left: 56.5%;
-  top: 23.4%;
+.container_search button {
   border-radius: 5px;
+  margin-top: 4px;
   border: none;
   height: 30px;
   cursor: pointer;
@@ -32,7 +28,7 @@
   text-decoration: none;
 }
 
-.search button img {
+.container_search button img {
   height: 30px;
   width: auto;
 }

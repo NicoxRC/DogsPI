@@ -1,6 +1,4 @@
 const axios = require('axios');
-require('dotenv').config();
-
 
 const getApiDogs = async () => {
     const apiDogs = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${process.env.API_KEY}`);

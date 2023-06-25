@@ -1,9 +1,6 @@
 .page_logo {
-  position: absolute;
   width: 500px;
   height: 500px;
-  top: 1%;
-  left: 5%;
   cursor: pointer;
 }
 

@@ -1,11 +1,11 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   filterByTemperaments,
   filterBySource,
-} from "../../../../slices/filtersSlice";
-import { setPage } from "../../../../slices/paginationSlice";
-import "./Filters.css";
+} from '../../../../slices/filtersSlice';
+import { setPage } from '../../../../slices/paginationSlice';
+import './Filters.css';
 
 export default function Filters() {
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ export default function Filters() {
 
   return (
     <div className="filter">
-      <div className="filter_temperaments">
+      <div className="filter_select">
         <h3>Temperaments:</h3>
         <select
           name="filterByTemperament"
@@ -43,7 +43,7 @@ export default function Filters() {
           ))}
         </select>
       </div>
-      <div className="filter_source">
+      <div className="filter_select">
         <h3>Source:</h3>
         <select
           name="filterBySource"

@@ -1,7 +1,4 @@
 .filterButton {
-  position: relative;
-  top: 12.5rem;
-  left: 25px;
   height: 40px;
   width: 70px;
   border: none;
@@ -12,7 +9,6 @@
 }
 
 .filterButton img {
-  position: relative;
   height: 30px;
   width: 40px;
   cursor: pointer;
@@ -20,8 +16,8 @@
 
 .filters_container {
   position: absolute;
-  top: 70px;
-  left: 150px;
+  top: 320px;
+  left: 100px;
   height: 190px;
   width: 350px;
   background: linear-gradient(to right, rgb(43, 161, 200), rgb(197, 226, 236));

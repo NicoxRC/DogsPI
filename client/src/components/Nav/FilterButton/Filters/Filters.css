@@ -1,36 +1,22 @@
 .filter {
   display: flex;
+  gap: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .filter h3 {
   color: black;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.filter_temperaments select {
+.filter_select select {
   color: black;
   cursor: pointer;
   width: 150px;
   height: 25px;
-  background: white;
-  border-radius: 5px;
-  border: none;
-  margin-left: 10px;
-  margin-right: 15px;
-  font-weight: bold;
-  font-size: medium;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.filter_source select {
-  color: black;
-  cursor: pointer;
-  width: 150px;
-  height: 25px;
-  background: white;
   border-radius: 5px;
   border: none;
   font-weight: bold;
   font-size: medium;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
