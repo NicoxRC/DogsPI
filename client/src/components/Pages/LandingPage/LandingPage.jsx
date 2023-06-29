@@ -14,7 +14,7 @@ export default function LandingPage() {
             <PageLogo />
           </Link>
         </div>
-        <div>
+        <div className="container_p">
           <p>Learn about different breeds of dogs and add new breeds</p>
         </div>
         <div className="container_logos">

@@ -15,7 +15,7 @@ export default function Card(props) {
         {props.weight} Kg
       </p>
       <p className="temperament_dog_card">
-        <strong>Temperament:</strong>
+        <strong>Temperament: </strong>
         {props.temperament ? props.temperament : "Not specified"}
       </p>
     </div>

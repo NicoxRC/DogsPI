@@ -6,8 +6,7 @@
   grid-gap: 20px;
   place-content: center;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 124px;
+  margin-top: 10px;
 }
 
 .link_dog {
