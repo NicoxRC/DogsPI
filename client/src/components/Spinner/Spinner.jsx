@@ -1,10 +1,12 @@
-import React from "react";
-import "./Spinner.css";
+import React from 'react';
+import './Spinner.css';
 
 export default function Spinner() {
   return (
-    <div class="lds-heart">
-      <div></div>
+    <div className="spinner_container">
+      <div className="lds-heart">
+        <div></div>
+      </div>
     </div>
   );
 }

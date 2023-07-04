@@ -17,11 +17,13 @@ export default function Home() {
     dispatch(fetchTemperaments());
   }, [dispatch]);
 
-  return (
+  return isLoading ? (
+    <Spinner />
+  ) : (
     <div className="home">
       <NavBar />
       <Pagination />
-      {isLoading ? <Spinner /> : <Cards />}
+      <Cards />
     </div>
   );
 }
