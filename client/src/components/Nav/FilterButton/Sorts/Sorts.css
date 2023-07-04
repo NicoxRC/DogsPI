@@ -1,14 +1,12 @@
 .sorts {
   display: flex;
-  margin-top: 30px;
-  margin-left: 88px;
+  gap: 10px;
 }
 
 .sorts button {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  margin-left: 20px;
   box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
   cursor: pointer;
 }

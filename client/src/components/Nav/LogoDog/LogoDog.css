@@ -1,3 +1,9 @@
 .LogoDog img {
   height: 250px;
 }
+
+@media (max-width: 750px) {
+  .LogoDog img {
+    height: 150px;
+  }
+}

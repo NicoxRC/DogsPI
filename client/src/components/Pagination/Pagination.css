@@ -36,3 +36,9 @@
   font-size: medium;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+@media (max-width: 750px) {
+  .pagination {
+    flex-wrap: wrap;
+  }
+}

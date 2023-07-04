@@ -23,7 +23,7 @@ export default function Search() {
         <input
           name="Search"
           type="text"
-          placeholder="Search..."
+          placeholder="Search a Dog..."
           onChange={handleChange}
         />
       </div>

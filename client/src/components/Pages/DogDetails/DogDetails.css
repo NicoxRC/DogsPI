@@ -25,7 +25,7 @@
 .dog_details_img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .dog_details_list {
@@ -69,4 +69,19 @@
   transform: scale(1.1);
   transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .dog_details_container {
+    flex-direction: column;
+    height: 75%;
+  }
+  .dog_details_img {
+    width: 100%;
+  }
+  .dog_details_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

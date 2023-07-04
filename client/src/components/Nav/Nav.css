@@ -1,7 +1,6 @@
 .navBar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-image: url('../../images/NavBar.png');
   padding-bottom: 10px;
 }
@@ -12,5 +11,5 @@
 
 .navBar_filters {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }

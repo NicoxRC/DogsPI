@@ -29,13 +29,12 @@ export default function Filters() {
   return (
     <div className="filter">
       <div className="filter_select">
-        <h3>Temperaments:</h3>
         <select
           name="filterByTemperament"
           defaultValue="all"
           onChange={handleTemperamentChange}
         >
-          <option value="all">Choose temperaments...</option>
+          <option value="all">Filter by temperaments</option>
           {temperaments?.map((temperament) => (
             <option value={temperament} key={temperament}>
               {temperament}
@@ -44,13 +43,12 @@ export default function Filters() {
         </select>
       </div>
       <div className="filter_select">
-        <h3>Source:</h3>
         <select
           name="filterBySource"
           onChange={handleSourceChange}
           defaultValue="default"
         >
-          <option value="default">Choose source...</option>
+          <option value="default">Filter by source</option>
           <option value="all">Show All</option>
           <option value="api">Only Api</option>
           <option value="db">Only DB</option>
