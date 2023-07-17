@@ -1,5 +1,5 @@
-import React from "react";
-import "./Card.css";
+import React from 'react';
+import './Card.css';
 
 export default function Card(props) {
   return (
@@ -16,7 +16,7 @@ export default function Card(props) {
       </p>
       <p className="temperament_dog_card">
         <strong>Temperament: </strong>
-        {props.temperament ? props.temperament : "Not specified"}
+        {props.temperament ? props.temperament : 'Not specified'}
       </p>
     </div>
   );

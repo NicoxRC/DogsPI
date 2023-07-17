@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchDogDetails } from "../../../slices/dogsSlice";
-import Spinner from "../../Spinner/Spinner";
-import "./DogDetails.css";
+import React, { useEffect } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchDogDetails } from '../../../slices/dogsSlice';
+import Spinner from '../../Spinner/Spinner';
+import './DogDetails.css';
 
 export default function DogDetails() {
   const { id } = useParams();
@@ -17,7 +17,7 @@ export default function DogDetails() {
   }, [id, dispatch]);
 
   const handleClickBack = () => {
-    history.push("/home");
+    history.push('/home');
   };
 
   return isLoading ? (
@@ -37,7 +37,7 @@ export default function DogDetails() {
                 <strong>Temperament: </strong>
                 {dogDetails?.temperament
                   ? dogDetails?.temperament
-                  : "Not specified"}
+                  : 'Not specified'}
               </p>
             </li>
             <li>
@@ -57,7 +57,7 @@ export default function DogDetails() {
                 <strong>Lifespan: </strong>
                 {parseInt(dogDetails?.lifespan) > 0
                   ? dogDetails?.lifespan
-                  : "Not specified"}
+                  : 'Not specified'}
               </p>
             </li>
           </ul>

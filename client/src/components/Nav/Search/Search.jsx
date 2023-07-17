@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchDog } from '../../../slices/dogsSlice';
+import { setPage } from '../../../slices/paginationSlice';
 import lupa from '../../../images/Search.png';
 import './Search.css';
 
@@ -15,6 +16,7 @@ export default function Search() {
 
   const handleClick = () => {
     dispatch(fetchDog(searchDog));
+    dispatch(setPage(1));
   };
 
   return (

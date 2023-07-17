@@ -1,0 +1,25 @@
+version: '3'
+services:
+  api:
+    container_name: dogsapi
+    restart: always
+    build: ./api
+    ports:
+      - '3001:3001'
+
+  client:
+    container_name: dogsclient
+    restart: always
+    build: ./client
+    ports:
+      - '3000:3000'
+
+  db:
+    container_name: postgres
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=rojaslopez19
+      - POSTGRES_DB=dogs
+    ports:
+      - '5432:5432'

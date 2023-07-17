@@ -1,10 +1,10 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
-import { postDog } from "../../../slices/dogsSlice";
-import { fetchTemperaments } from "../../../slices/temperamentsSlice";
-import "./CreateDog.css";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { postDog } from '../../../slices/dogsSlice';
+import { fetchTemperaments } from '../../../slices/temperamentsSlice';
+import './CreateDog.css';
 
 export default function CreateDog() {
   const history = useHistory();
@@ -16,19 +16,19 @@ export default function CreateDog() {
   const [error, setError] = useState({});
   const [selectedTemperaments, setSelectedTemperaments] = useState([]);
   const [newDog, setNewDog] = useState({
-    name: "",
+    name: '',
     height_min: 0,
     height_max: 0,
     weight_min: 0,
     weight_max: 0,
     lifespan_min: 0,
     lifespan_max: 0,
-    image: "",
+    image: '',
   });
 
   const formValidation = (input) => {
     const regexName = /[0-9.,#!$%&;:{}=\-_`~()”“"…]/g;
-    const regexImage = "[^\\s]+(.*?)\\.(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)$";
+    const regexImage = '[^\\s]+(.*?)\\.(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)$';
     let errors = {
       name: false,
       height_min: false,
@@ -42,7 +42,7 @@ export default function CreateDog() {
     let validate = true;
 
     if (
-      typeof input.name === "string" &&
+      typeof input.name === 'string' &&
       !input.name.match(regexName) &&
       input.name.length > 0 &&
       input.name.length < 30
@@ -120,7 +120,7 @@ export default function CreateDog() {
     }
 
     if (input.image.length > 0) {
-      if (typeof input.image === "string" && input.image.match(regexImage)) {
+      if (typeof input.image === 'string' && input.image.match(regexImage)) {
         errors = { ...errors, image: false };
       } else {
         errors = { ...errors, image: true };
@@ -165,7 +165,7 @@ export default function CreateDog() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(postDog({ ...newDog, temperament: selectedTemperaments }));
-    history.push("/home");
+    history.push('/home');
   };
 
   const handleDelete = (temp) => {
@@ -173,7 +173,7 @@ export default function CreateDog() {
   };
 
   const handleClickBack = () => {
-    history.push("/home");
+    history.push('/home');
   };
 
   useEffect(() => {
@@ -315,7 +315,7 @@ export default function CreateDog() {
           <div className="temperaments_container">
             {selectedTemperaments?.map((temp) => (
               <p value={temp} key={temp}>
-                {temp}{" "}
+                {temp}{' '}
                 <button type="button" onClick={() => handleDelete(temp)}>
                   ✖
                 </button>

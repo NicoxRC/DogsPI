@@ -74,7 +74,7 @@
 @media (max-width: 750px) {
   .dog_details_container {
     flex-direction: column;
-    height: auto
+    height: auto;
   }
   .dog_details_img {
     width: 100%;
