@@ -2,7 +2,7 @@ module.exports = async (req, res) => {
   const { firma } = req.body;
   try {
     const encondedText = new TextEncoder().encode(firma);
-    const hashBuffer = await Crypto.subtle.digest('SHA-256', encondedText);
+    const hashBuffer = crypto.subtle.digest('SHA-256', encondedText);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     const hashHex = hashArray
       .map((b) => b.toString(16).padStart(2, '0'))
