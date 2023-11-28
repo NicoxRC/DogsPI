@@ -3,4 +3,5 @@ module.exports = {
   getDog: require('./getDog'),
   createDogs: require('./createDogs'),
   getTemperaments: require('./getTemperaments'),
+  createSHA256: require('./createSHA256'),
 };
