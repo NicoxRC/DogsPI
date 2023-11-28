@@ -1,3 +1,5 @@
+const crypto = require('crypto');
+
 module.exports = async (req, res) => {
   const { firma } = req.body;
   try {
